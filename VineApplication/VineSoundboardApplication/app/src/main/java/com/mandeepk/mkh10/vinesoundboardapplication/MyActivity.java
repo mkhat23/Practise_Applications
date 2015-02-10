@@ -26,23 +26,32 @@ public class MyActivity extends Activity {
 
         mNinePlusTenButton = (Button) findViewById(R.id.nine_plus_ten);
         mp = MediaPlayer.create(this, R.raw.you_stupid);
-        mNinePlusTenButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            mp.start();
-            }
-        });
+        mNinePlusTenButton.setOnClickListener(onClickListeneR);
 
         mTwentyOneButton = (Button) findViewById(R.id.twenty_one);
         mp = MediaPlayer.create(this, R.raw.twenty_one);
-        mTwentyOneButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mp.start();
-            }
-        });
+        mTwentyOneButton.setOnClickListener(onClickListene);
     }
 
+
+
+    private OnClickListener onClickListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch(v.getId()){
+                case R.id.button1:
+                    //DO something
+                    break;
+                case R.id.button2:
+                    //DO something
+                    break;
+                case R.id.button3:
+                    //DO something
+                    break;
+            }
+
+        }
+    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
