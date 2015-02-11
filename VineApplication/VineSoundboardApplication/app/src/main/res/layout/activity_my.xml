@@ -1,5 +1,6 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/table"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -19,13 +20,15 @@
         android:id="@+id/nine_plus_ten"
         android:layout_width="100dp"
         android:layout_height="match_parent"
-        android:text="@string/nine_ten"/>
+        android:text="@string/nine_ten"
+        android:onClick="onClick"/>
 
     <Button
         android:id="@+id/twenty_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/twenty_one"/>
+        android:text="@string/twenty_one"
+        android:onClick="onClick"/>
 
     </TableRow>
 
@@ -35,18 +38,20 @@
 
 
         <Button
-            android:id="@+id/Do_It_For_The_Vine"
+            android:id="@+id/do_it_for_the_vine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/DIFTV"/>
+            android:text="@string/DIFTV"
+            android:onClick="onClick"/>
 
         <Button
             android:id="@+id/ravioli"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ravioli"/>
+            android:text="@string/ravioli"
+            android:onClick="onClick"/>
 
     </TableRow>
 

@@ -24,33 +24,11 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
+
         mNinePlusTenButton = (Button) findViewById(R.id.nine_plus_ten);
-        mp = MediaPlayer.create(this, R.raw.you_stupid);
-        mNinePlusTenButton.setOnClickListener(onClickListeneR);
-
         mTwentyOneButton = (Button) findViewById(R.id.twenty_one);
-        mp = MediaPlayer.create(this, R.raw.twenty_one);
-        mTwentyOneButton.setOnClickListener(onClickListene);
-    }
+        mDoItForTheVineButton = (Button) findViewById(R.id.do_it_for_the_vine);
 
-
-
-    private OnClickListener onClickListener = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            switch(v.getId()){
-                case R.id.button1:
-                    //DO something
-                    break;
-                case R.id.button2:
-                    //DO something
-                    break;
-                case R.id.button3:
-                    //DO something
-                    break;
-            }
-
-        }
     };
 
     @Override
@@ -70,5 +48,30 @@ public class MyActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.nine_plus_ten:
+                playSound(R.raw.nine_plus_ten_sc);
+                break;
+            case R.id.twenty_one:
+                playSound(R.raw.twenty_one);
+                break;
+            case R.id.do_it_for_the_vine:
+                playSound(R.raw.diftvsc);
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void playSound(int input){
+        if (mp!=null){
+            mp.reset();
+            mp.release();
+        }
+        mp = MediaPlayer.create(this, input);
+        mp.start();
     }
 }
