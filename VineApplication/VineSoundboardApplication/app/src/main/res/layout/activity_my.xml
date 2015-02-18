@@ -35,7 +35,7 @@
         android:onClick="onClick"
         android:longClickable="true"
         android:background="@color/colorPrimary"
-        android:layout_margin="5dp"/>
+        android:layout_margin="2dp"/>
 
     <Button
         android:id="@+id/twenty_one"
@@ -71,7 +71,7 @@
             android:text="@string/ravioli"
             android:background="@color/colorPrimary"
             android:onClick="onClick"
-            android:layout_margin="5dp"/>
+           />
 
     </TableRow>
 
@@ -87,7 +87,8 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/dont_do_it"
             android:background="@color/colorPrimary"
-            android:onClick="onClick"/>
+            android:onClick="onClick"
+            />
 
 
     </TableRow>
