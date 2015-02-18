@@ -1,8 +1,12 @@
 package com.mandeepk.mkh10.vinesoundboardapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,10 +15,12 @@ import android.widget.Button;
 import junit.framework.Test;
 
 
-public class MyActivity extends Activity {
+public class MyActivity extends ActionBarActivity {
     private Button mNinePlusTenButton;
     private Button mTwentyOneButton;
     private Button mDoItForTheVineButton;
+    private Button mRavioliButton;
+    private Button mDontDoItButton;
     private MediaPlayer mp;
 
 
@@ -23,22 +29,77 @@ public class MyActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
 
 
         mNinePlusTenButton = (Button) findViewById(R.id.nine_plus_ten);
+        mNinePlusTenButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Uri uri = Uri.parse("https://www.youtube.com/watch?v=BzVXbeASRiQ");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                return true;
+            }
+        });
+
         mTwentyOneButton = (Button) findViewById(R.id.twenty_one);
+        mTwentyOneButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Uri uri = Uri.parse("https://www.youtube.com/watch?v=BzVXbeASRiQ");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                return true;
+            }
+        });
+
         mDoItForTheVineButton = (Button) findViewById(R.id.do_it_for_the_vine);
+        mDoItForTheVineButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Uri uri = Uri.parse("https://www.youtube.com/watch?v=24FaTsnkYYM");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                return true;
+            }
+        });
+
+        mRavioliButton = (Button) findViewById(R.id.ravioli);
+        mRavioliButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Uri uri = Uri.parse("https://www.youtube.com/watch?v=KMaGAl3QosY");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                return true;
+            }
+        });
+
+        mDontDoItButton = (Button) findViewById(R.id.oh_dont_do);
+        mDontDoItButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Uri uri = Uri.parse("https://www.youtube.com/watch?v=XPB6pAA_oFs");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                return true;
+            }
+        });
+
 
     };
 
-    @Override
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.my, menu);
         return true;
     }
 
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -61,10 +122,17 @@ public class MyActivity extends Activity {
             case R.id.do_it_for_the_vine:
                 playSound(R.raw.diftvsc);
                 break;
+            case R.id.ravioli:
+                playSound(R.raw.ravioli_vine);
+                break;
+            case R.id.oh_dont_do:
+                playSound(R.raw.oh_dont_do_it);
             default:
                 break;
         }
     }
+
+
 
     public void playSound(int input){
         if (mp!=null){

@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"/>
+
     <TextView
         android:text="@string/intro_message"
         android:layout_width="wrap_content"
@@ -21,7 +28,8 @@
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:text="@string/nine_ten"
-        android:onClick="onClick"/>
+        android:onClick="onClick"
+        android:longClickable="true"/>
 
     <Button
         android:id="@+id/twenty_one"
@@ -52,6 +60,22 @@
             android:layout_height="wrap_content"
             android:text="@string/ravioli"
             android:onClick="onClick"/>
+
+    </TableRow>
+
+    <TableRow
+        android:paddingTop="10dp"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/oh_dont_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/dont_do_it"
+            android:onClick="onClick"/>
+
 
     </TableRow>
 
