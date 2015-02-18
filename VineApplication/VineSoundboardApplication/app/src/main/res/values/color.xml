@@ -2,4 +2,6 @@
 <resources>
     <color name="colorPrimary">#4CAF50</color>
     <color name="colorPrimaryDark">#388E3C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="purple">#7C4DFF</color>
 </resources>
