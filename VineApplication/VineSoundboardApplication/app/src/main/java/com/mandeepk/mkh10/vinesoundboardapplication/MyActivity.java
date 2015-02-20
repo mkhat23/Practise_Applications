@@ -21,6 +21,9 @@ public class MyActivity extends ActionBarActivity {
     private Button mDoItForTheVineButton;
     private Button mRavioliButton;
     private Button mDontDoItButton;
+    private Button mOhMyGodButton;
+    private Button mNotMyDadButton;
+    private Button mWhereDeyAtDoeButton;
     private MediaPlayer mp;
 
 
@@ -90,6 +93,38 @@ public class MyActivity extends ActionBarActivity {
             }
         });
 
+        mOhMyGodButton = (Button) findViewById(R.id.omg);
+        mOhMyGodButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Uri uri = Uri.parse("https://www.youtube.com/watch?v=Ov8mAjlDhd8");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                return true;
+            }
+        });
+
+        mNotMyDadButton = (Button) findViewById(R.id.not_my_dad);
+        mNotMyDadButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Uri uri = Uri.parse("https://www.youtube.com/watch?v=vbfVd2bqFXg");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                return true;
+            }
+        });
+
+        mWhereDeyAtDoeButton = (Button) findViewById(R.id.not_my_dad);
+        mWhereDeyAtDoeButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Uri uri = Uri.parse("https://www.youtube.com/watch?v=Zt8m3--nREE");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                return true;
+            }
+        });
 
     };
 
@@ -127,6 +162,15 @@ public class MyActivity extends ActionBarActivity {
                 break;
             case R.id.oh_dont_do:
                 playSound(R.raw.oh_dont_do_it);
+                break;
+            case R.id.omg:
+                playSound(R.raw.omg);
+                break;
+            case R.id.not_my_dad:
+                playSound(R.raw.not_my_dad);
+                break;
+            case R.id.where_they_at:
+                playSound(R.raw.where_they_at_doe);
             default:
                 break;
         }
