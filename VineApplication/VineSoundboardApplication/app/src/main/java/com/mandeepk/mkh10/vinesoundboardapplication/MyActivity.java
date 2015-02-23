@@ -115,7 +115,7 @@ public class MyActivity extends ActionBarActivity {
             }
         });
 
-        mWhereDeyAtDoeButton = (Button) findViewById(R.id.not_my_dad);
+        mWhereDeyAtDoeButton = (Button) findViewById(R.id.where_they_at);
         mWhereDeyAtDoeButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
