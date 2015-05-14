@@ -4,12 +4,13 @@
     <string name="app_name">VineSoundboardApplication</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="intro_message">Welcome to the vine soundboard. Click the buttons to hear your favourite vine catchphrases</string>
+    <string name="intro_message">Welcome to the vine soundboard. Click the buttons to hear your favourite vine
+        catchphrases. Long click to be taken to the original vine!</string>
     <string name="nine_ten">What\'s 9 + 10</string>
     <string name="twenty_one">21</string>
     <string name="Fck_vine">F*ck Vine b*tch</string>
     <string name="DIFTV">Do it for the Vine</string>
-    <string name="ravioli">I don\'t want no ravioli</string>
+    <string name="ravioli">Ravioli</string>
     <string name="dont_do_it">Oh don\'t do it</string>
     <string name="omg">Oh my God!</string>
     <string name="not_my_dad">You\'r not my dad</string>
